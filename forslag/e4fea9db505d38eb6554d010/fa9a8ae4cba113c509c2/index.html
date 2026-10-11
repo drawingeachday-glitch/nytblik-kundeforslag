@@ -1,0 +1,253 @@
+<!doctype html><html lang="da"><head><meta name="robots" content="noindex,nofollow"><meta name="nytblik-preview" content="813092d06d513f012f78907799d0bbb42c71523dbf0b2f6130069025db741caf"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data: https:; font-src 'none'; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'"><title>Ølbaren – designforslag</title><style>
+:root{--background:#f5f0e5;--surface:#eae3d5;--text:#302822;--muted:#6d6259;--accent:#732e35;--accent-text:#fff7e9;--border:#cbc0af;--space:clamp(24px,5vw,72px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--background);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.7}
+a{color:inherit;text-underline-offset:5px;text-decoration-thickness:1px;transition:color .18s,background-color .18s}
+a:hover{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+h1,h2,h3,p{margin:0}
+p+p{margin-top:20px}
+h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.1;letter-spacing:-.035em}
+h1{font-size:clamp(42px,6.5vw,80px);max-width:17ch}
+h2{font-size:clamp(30px,4vw,44px)}
+h3{font-size:18px;line-height:1.4}
+p{max-width:65ch}
+p:empty{display:none}
+header,main,footer{width:min(1180px,calc(100% - var(--space) * 2));margin-inline:auto}
+header{padding:28px 0 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-family:Georgia,'Times New Roman',serif;font-size:38px;font-weight:bold;letter-spacing:-2px;text-decoration:none;color:var(--accent);line-height:1.2;padding:6px 0}
+nav{display:flex;gap:8px 24px;flex-wrap:wrap;justify-content:flex-end}
+nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:14px;font-weight:bold}
+.website-page{padding:64px 0 80px;animation:enter .4s ease-out}
+.website-page{display:none}
+#home{display:block}
+body:has(.website-page:target) .website-page{display:none}
+body:has(.website-page:target) .website-page:target{display:block}
+body:not(:has(.website-page:target)) nav a[href="#home"],body:has(#home:target) nav a[href="#home"],body:has(#services:target) nav a[href="#services"],body:has(#tasting:target) nav a[href="#tasting"],body:has(#event:target) nav a[href="#event"],body:has(#contact:target) nav a[href="#contact"]{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px}
+.eyebrow{font-size:13px;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+.hero{padding:12px 0 64px;max-width:940px}
+.hero h1{font-size:clamp(48px,7.6vw,96px);color:var(--accent);max-width:17ch}
+.hero .intro{font-size:clamp(18px,2vw,21px);max-width:58ch;margin-top:32px}
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:50px;background:var(--accent);color:var(--accent-text);padding:10px 26px;text-decoration:none;font-size:15px;font-weight:bold;margin-top:28px}
+.cta:hover{background:var(--text);color:var(--accent-text)}
+.rule-row{border-top:1px solid var(--border);padding-top:32px;display:grid;grid-template-columns:1fr 2fr;gap:40px}
+.rule-row h2{font-size:30px}
+.rule-row .text{max-width:66ch}
+.link-row{display:flex;flex-wrap:wrap;gap:16px 36px;margin-top:24px}
+.link-row a{min-height:44px;display:inline-flex;align-items:center;font-weight:bold}
+.page-head{margin-bottom:48px}
+.page-head p:not(.eyebrow){margin-top:28px;font-size:19px}
+.service-intro{display:grid;grid-template-columns:1fr 2fr;gap:40px;border-top:1px solid var(--border);padding-top:32px}
+.beer-list{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.beer-list article{padding:22px 0;border-top:1px solid var(--border);min-width:0}
+.beer-list h3{font-family:Georgia,'Times New Roman',serif;font-size:23px;font-weight:400}
+.beer-list p{font-size:14px;color:var(--muted);margin-top:8px}
+.contact-band{background:var(--surface);padding:32px;margin-top:48px}
+.contact-band p{margin-top:18px}
+.reading{max-width:760px}
+.reading>section{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.reading h2{margin-bottom:24px}
+.reading h3{margin:28px 0 12px}
+.reading ul{padding-left:22px}
+.reservation-list{list-style:none;padding:0!important;display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:64px}
+.contact-grid h2{margin-bottom:24px}
+.contact-links{display:flex;align-items:flex-start;flex-direction:column;margin-top:28px;gap:8px}
+.contact-links a{font-size:clamp(19px,2.3vw,28px);min-height:44px;overflow-wrap:anywhere;max-width:100%}
+.contact-grid aside{padding:32px;background:var(--surface)}
+.post{margin-top:40px;color:var(--muted);font-size:15px}
+.post p+p{margin-top:0}
+details{margin-top:36px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0}
+summary{cursor:pointer;padding:10px 0;font-weight:bold}
+details ul{padding-left:22px}
+footer{border-top:1px solid var(--border);padding:28px 0 36px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;font-size:14px;color:var(--muted)}
+footer p+p{margin-top:0}
+footer a{display:inline-flex;align-items:center;min-height:44px}
+@keyframes enter{from{transform:translateY(6px)}to{transform:translateY(0)}}
+@media(max-width:900px){header{align-items:flex-start;flex-direction:column;gap:12px}nav{justify-content:flex-start}.contact-grid{gap:32px}.website-page{padding-top:44px}}
+@media(max-width:600px){:root{--space:24px}body{font-size:16px}nav{gap:2px 20px}.brand{font-size:34px}.hero{padding-bottom:44px}.rule-row,.service-intro,.contact-grid{grid-template-columns:1fr;gap:24px}.beer-list{grid-template-columns:1fr}.contact-grid aside,.contact-band{padding:24px}.website-page{padding-bottom:48px}.page-head{margin-bottom:36px}.reservation-list{grid-template-columns:1fr}footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-wrap:break-word}img{max-width:100%;height:auto}a:focus-visible,summary:focus-visible{outline:3px solid currentColor;outline-offset:5px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}section.website-page{display:none!important}section.website-page[id="home"]{display:block!important}body:has(section.website-page:target) section.website-page{display:none!important}body:has(section.website-page:target) section.website-page:target{display:block!important}</style></head><body>
+<header>
+<a class="brand" href="#home">Ølbaren</a>
+<nav>
+<a href="#home">Hjem</a>
+<a href="#services">Ydelser</a>
+<a href="#tasting">Ølsmagning</a>
+<a href="#event">Ølentusiasternes J-dag</a>
+<a href="#contact">Kontakt</a>
+</nav>
+</header>
+<main>
+<section class="website-page" id="home">
+<div class="hero">
+<p class="eyebrow">Elmegade 2</p>
+<h1>Vi har helt sikkert en øl du ikke ka&#39; li&#39;!</h1>
+<p></p>
+<p class="intro">På Ølbaren går vi ikke efter at have det største udvalg, vi vil hellere præsentere et bredt og interessant udvalg. Vi skifter løbende ud, specielt på hanerne, og du vil som gæst derfor ofte finde noget du ikke har fået før hos os.</p>
+<a class="cta" href="#contact">Kontakt os</a>
+</div>
+<div class="rule-row">
+<h2>Ølbaren</h2>
+<div class="text">
+<p>Det er hér du kommer for at få grundig vejledning af vores vidende tendere, hér du kommer efter det brede udvalg og hér du kommer efter den gode øloplevelse.</p>
+<p>...og for at have det rart! :-)</p>
+<div class="link-row">
+<a href="#services">Ølsortiment</a>
+<a href="#tasting">Ølsmagning</a>
+</div>
+</div>
+</div>
+</section>
+<section class="website-page" id="services">
+<div class="page-head">
+<p class="eyebrow">Ydelser</p>
+<h1>Ølsortiment</h1>
+<p>Vi søger at holde en bredde i vores øludvalg så det er muligt at komme godt omkring i de forskellige øltyper. Her på siden finder du listen over vores sortiment i øjeblikket.</p>
+</div>
+<div class="beer-list">
+<article><h3>Flying Couch Czech It Out Now</h3><p>DK - Pilsner - Czech / Bohemian - 4.5% - Untappd</p></article>
+<article><h3>Brauerei Eichhorn Dörfleins Pils</h3><p>DE - Pilsener - 4.9% - Untappd</p></article>
+<article><h3>Sonnen-Bräu Mürsbach Kellerbier</h3><p>DE - Kellerbier / Zwickelbier - 4.7% - Untappd</p></article>
+<article><h3>König Ludwig Schlossbrauerei Kaltenberg König Ludwig Weissbier Hell</h3><p>DE - German Hefeweizen - 5.5% - Untappd</p></article>
+<article><h3>Brauerei Eichhorn Dörfleins Schwarzer Adler</h3><p>DE - Lager - Munich Dunkel - 6% - Untappd</p></article>
+<article><h3>Sheppy&#39;s Cider Ltd Classic Draught</h3><p>GB - Cider - Other Fruit - 5.5% - Untappd</p></article>
+<article><h3>St. Bernardus Wit</h3><p>BE - Wheat Beer - Witbier - 5.5% - Untappd</p></article>
+<article><h3>Schlenkerla Aecht Schlenkerla Rauchbier - Märzen</h3><p>DE - Smoked - 5.1% - Untappd</p></article>
+<article><h3>Girardin Unblended Oude Lambik</h3><p>BE - Lambic Style - Unblended - 5% - Untappd</p></article>
+<article><h3>Alefarm Old Boys Classic</h3><p>DK - Vienna - 5% - Untappd</p></article>
+<article><h3>Boon Kriek Boon Sélection</h3><p>BE - Lambic Style - Fruit - 6.5% - Untappd</p></article>
+<article><h3>Amager Berry Bliss: Peaches &amp; Cranberries Sour</h3><p>DK - Sour - Fruited - 5% - Untappd</p></article>
+<article><h3>Flying Couch Koldskåål</h3><p>DK - Sour - Fruited - 4% - Untappd</p></article>
+<article><h3>Ølsnedkeren Limehviskeren</h3><p>DK - Sour - Fruited - 4.4% - Untappd</p></article>
+<article><h3>Amager Collywobbles</h3><p>DK - pale ale sessio - 6.3% - Untappd</p></article>
+<article><h3>Gamma Zig Zag</h3><p>DK - Session IPA - 4.5% - Untappd</p></article>
+<article><h3>Ølsnedkeren Karl Smart</h3><p>DK - IPA - New England / Hazy - 6.7% - Untappd</p></article>
+<article><h3>Flying Couch I&#39;d Give It All Hop For You</h3><p>DK - IPA - New England / Hazy - 5.8% - Untappd</p></article>
+<article><h3>Amager Heavenly Hops - Oracle</h3><p>DK - IPA - New England / Hazy - 6.5% - Untappd</p></article>
+<article><h3>Amager Demon Juice</h3><p>DK - IPA - New England / Hazy - 7% - Untappd</p></article>
+<article><h3>Flying Couch Run &amp; Hops</h3><p>DK - IPA - New England / Hazy - 6% - Untappd</p></article>
+<article><h3>Amager Reaping Ravens</h3><p>DK - IPA - Oceanic - 7.5% - Untappd</p></article>
+<article><h3>Alefarm Jukebox</h3><p>DK - American IPA - 6% - Untappd</p></article>
+<article><h3>Ritual Lab Kush</h3><p>IT - American IPA - 6.5% - Untappd</p></article>
+<article><h3>Alefarm Afterglow</h3><p>DK - Imperial / Double IPA - 8% - Untappd</p></article>
+<article><h3>Ghost Liquid Brunch</h3><p>DK - Stout - 6.5% - Untappd</p></article>
+<article><h3>Founders Brewing Co. KBS</h3><p>US - Stout - Imperial / Double Coffee - 12% - Untappd</p></article>
+<article><h3>St. Bernardus Abt 12</h3><p>BE - Abt/Quadrupel - 10% - Untappd</p></article>
+</div>
+<aside class="contact-band">
+<h2>Ølsmagning</h2>
+<p>Vil du vide mere end blot en kort introduktion og samtidig smage et bredere udvalg, kan du bestille en ølsmagning og bliv guidet rundt i øllets univers.</p>
+<a class="cta" href="#tasting">Læs mere</a>
+</aside>
+</section>
+<section class="website-page" id="contact">
+<div class="page-head">
+<p class="eyebrow">Ølbaren</p>
+<h1>Kontakt</h1>
+</div>
+<div class="contact-grid">
+<div>
+<h2>Elmegade 2</h2>
+<p>2200 Kbh N</p>
+<div class="contact-links">
+<a href="tel:35354534">3535 4534</a>
+<a href="mailto:smagning@oelbaren.dk">smagning@oelbaren.dk</a>
+</div>
+<div class="post">
+<p>Postadresse:</p>
+<p>Cerevisia Aps</p>
+<p>Nørrebrogade 40 st.tv.</p>
+</div>
+</div>
+<aside>
+<h2>Åbningstider:</h2>
+<p>Åbningstider: Man-ons 16-24, tor 16-01, fre 15-02, lør 15-02, søn 16-21. Kontakt: mail eller tlf.: 3535 4534 (i åbningstiden når vi kan nå det)</p>
+<div class="link-row"><a href="#tasting">Ølsmagning</a></div>
+</aside>
+</div>
+</section>
+<section class="website-page" id="tasting">
+<div class="reading">
+<div class="page-head">
+<p class="eyebrow">Ølbaren</p>
+<h1>Ølsmagning</h1>
+<p>Ikke nok med at vi sælger en masse gode øl. Vi er også i stand til at fortælle om dem. Når du kommer ind på Ølbaren, vil du derfor altid finde en dygtig tender bag baren, der kan fortælle om de øl, vi har på fad og i køleskabene.</p>
+<p>Vil du vide mere end blot en kort introduktion og samtidig smage et bredere udvalg, kan du bestille en ølsmagning og bliv guidet rundt i øllets univers.</p>
+<a class="cta" href="mailto:smagning@oelbaren.dk">Skriv til os</a>
+</div>
+<section>
+<h2>Hvad du får</h2>
+<p>Det er vores kompetente tender, der sammensætter ølsmagningen på dagen, ud fra hvilke øl vi har på hanerne. Du vil blive ført rundt i øllets univers og præsenteret for øl, som du sandsynligvis ikke har smagt før. Tenderen vil fortælle om hver smagsprøve.</p>
+<p>Vi kan sagtens sammensætte en ølsmagning ud fra dine specifikke ønsker. Dette kan aftales, når der reserveres tid.</p>
+</section>
+<section>
+<h2>Praktisk information</h2>
+<h3>Pris og mængde:</h3>
+<p>En ølsmagning på Ølbaren består af 5 smagsprøver á 10 cl.</p>
+<p>Det koster 175 kr. per person.</p>
+<h3>Tidspunkter:</h3>
+<p>Vi tilbyder ølsmagninger i vores åbningstider, dog ikke hele fredag eller lørdag efter klokken 18, da der er for travlt i baren på disse tidspunkter. Ønskes du en ølsmagning uden for vores åbningstider, kontakt os venligst herom.</p>
+</section>
+<section>
+<h2>Reservation</h2>
+<p>Ønsker du en ølsmagning på vores hyggelige bar kan du sende en mail til smagning@oelbaren.dk, med følgende oplysninger:</p>
+<ul class="reservation-list">
+<li>- Navn</li>
+<li>- Tlf.</li>
+<li>- Mail</li>
+<li>- Dato</li>
+<li>- Tidspunkt</li>
+<li>- Antal personer</li>
+<li>- Bemærkninger/ønsker</li>
+</ul>
+<p>Herefter vil du modtage svar/bekræftelse.</p>
+<a class="cta" href="mailto:smagning@oelbaren.dk">Skriv til os</a>
+</section>
+</div>
+</section>
+<section class="website-page" id="event">
+<div class="reading">
+<div class="page-head">
+<p class="eyebrow">Ølbaren</p>
+<h1>Ølentusiasternes J-dag</h1>
+</div>
+<section>
+<h2>&quot;ØJ-dag&quot; er hvert år dagen før J-dag</h2>
+<p>ØJ-dag er indstiftet i 2003 af Ølbaren som et velsmagende alternativ til de gamle bryggeriers J-dag: Alle der mener at have noget interessant julebryg at servere/sælge, opfordres hermed til at starte salget hvert år på denne dag.</p>
+<p>Formålet er at skabe opmærksomhed omkring det lidt bedre juleøl, og jo flere der er med, jo bedre kan vi trænge igennem til folk. De danske øldrikkere fortjener at vide at de ikke behøver nøjes med det samme sjap hvert år... :-)</p>
+<p>Dagen har fokus på kvalitet fremfor kvantitet. Som Christian S. Andersen fra BeerHere (og den nu hedengangne Ølfabrikken) så smukt udtrykte det: &quot;I stedet for uhæmmet druk, letpåklædte nissepiger og millioner af PR-kroner er kvalitetsøllet i centrum. Da kvalitetsøl, kvalitetsmennesker og kvalitetstid hænger sammen er det et arrrangement med en del mere substans i glasset om aftenen end suspekt stads på fortovet næste morgen.&quot;</p>
+</section>
+<section>
+<h2>Deltag i 2026</h2>
+<p><strong>I år er ØJ-dag torsdag d. 5. november.</strong></p>
+<p>Har du en bar, en restaurant, en butik eller et bryggeri, og sælger du juleøl der er lidt ud over det sædvanlige, så vær med til at markere dagen ved at vente med at frigive dit juleøl til ØJ-dag.</p>
+<p>Tilmelding er på ingen måde nødvendig, man &quot;hopper blot på vognen&quot; hvis man har lyst. Dog vil det være en god idé at melde sin tilslutning allerede nu, så man kan komme på listen her. Skriv en mail med angivelse af: NAVN på stedet, ADRESSE og HJEMMESIDE.</p>
+</section>
+<details>
+<summary>Deltagende i 2026 - indtil videre</summary>
+<ul>
+<li>Bogholderiet - ølbar på værftet - Frederiksø 2, Svendborg</li>
+<li>Det Gamle Hundebad - Rødovrevej 79, Rødovre</li>
+<li>Dronning Louise - Torvet 19, Esbjerg</li>
+<li>Esbjerg Bryghus - Jyllandsgade 14D, Esbjerg</li>
+<li>Rallys - Mozartsvej 9, Kbh SV</li>
+<li>Sir Club - Nørregade 49, Odense</li>
+<li>Skaal København - Kultorvet 11, Kbh K</li>
+<li>Tap 21 Craft Beer - H. C. Ørsteds Vej 21, Frederiksberg C</li>
+<li>Taphouse - Lavendelstræde 15, Kbh K</li>
+<li>The Last Waterhole - Vesterbrogade 47, Vejle</li>
+<li>Ølbaren - Elmegade 2, Kbh N</li>
+<li>Ølmand - Enghavevej 14a, Kbh V</li>
+</ul>
+</details>
+</div>
+</section>
+</main>
+<footer>
+<div><p><strong>Ølbaren</strong></p><p>Elmegade 2</p><p>2200 Kbh N</p></div>
+<a href="tel:35354534">3535 4534</a>
+<a href="#contact">Kontakt os</a>
+</footer>
+<footer style="padding:18px;text-align:center;font:12px system-ui">Designforslag · ikke virksomhedens officielle hjemmeside.</footer></body></html>
